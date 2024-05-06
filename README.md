@@ -9,14 +9,27 @@ Jag lade in min apps JSON-data via admin-gränssnittet på kursens webbtjänst. 
 användes. Förutom ID och mitt login representerade attributen akvariefiskarnas namn, längd i cm, 
 härkomst, svårighetsgrad och lämplig vattentemperatur. 
 
+
+Jag lade till en recyclerview i activity_main.
+```
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+```
+Därefter skapade jag en ny layout-fil
+
 Implementationsexempel
 
 Implementationsexempel VG (för de som satsar på VG) 
 
 Reflektion
 
-```
-```
+
 
 ```
 ```
