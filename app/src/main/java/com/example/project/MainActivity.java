@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         adapter = new RecyclerViewAdapter(this, items, new RecyclerViewAdapter.OnClickListener() {
             @Override
             public void onClick(RecyclerViewItem item) {
-                Log.d("Klickat", "mountain");
+                Log.d("Klickat", "fisk");
             }
         });
 

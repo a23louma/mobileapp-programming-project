@@ -30,8 +30,8 @@ layout-filen. Se koden nedan.
         android:id="@+id/recycler_view_item_title"/>
 ```
 
-Därefter skapade jag RecyclerViewAdapter-klassen där jag även behövde skapa ViewHolder-klassen.
-I MainActivity skapade jag ett adapter-objekt. Se koden nedan.
+Därefter skapade jag RecyclerViewAdapter-klassen där jag även behövde skapa ViewHolder-klassen. Jag
+lade till nödvändig kod i dessa klasser. I MainActivity skapade jag ett adapter-objekt. Se koden nedan.
 ```
         adapter = new RecyclerViewAdapter(this, items, new RecyclerViewAdapter.OnClickListener() {
             @Override
@@ -39,7 +39,22 @@ I MainActivity skapade jag ett adapter-objekt. Se koden nedan.
                 Log.d("Klickat", "item");
             }
 ```
-Jag skapade även RecyclerViewItem-klassen.
+Jag skapade även RecyclerViewItem-klassen. Jag lade till de attribut som behövdes för min JSON-data
+samt tillhörande getters-metoder. Se koden nedan.
+
+```
+    @ SerializedName ("ID")
+    private String title;
+    private String name;
+    @ SerializedName ("location")
+    private String origin;
+    @ SerializedName ("size")
+    private int sizeInCentimeters;
+    @ SerializedName ("cost")
+    private int waterTemperature;
+    @ SerializedName ("company")
+    private int difficulty;
+```
 
 Implementationsexempel
 
