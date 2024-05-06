@@ -21,7 +21,16 @@ Jag lade till en recyclerview i activity_main.
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 ```
-Därefter skapade jag en ny layout-fil
+Därefter skapade jag en ny layout-fil som jag namngav recyclerviewitem. Jag lade in en TextView i
+layout-filen. Se koden nedan.
+```
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recycler_view_item_title"/>
+```
+
+
 
 Implementationsexempel
 
