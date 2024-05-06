@@ -30,7 +30,16 @@ layout-filen. Se koden nedan.
         android:id="@+id/recycler_view_item_title"/>
 ```
 
-
+Därefter skapade jag RecyclerViewAdapter-klassen där jag även behövde skapa ViewHolder-klassen.
+I MainActivity skapade jag ett adapter-objekt. Se koden nedan.
+```
+        adapter = new RecyclerViewAdapter(this, items, new RecyclerViewAdapter.OnClickListener() {
+            @Override
+            public void onClick(RecyclerViewItem item) {
+                Log.d("Klickat", "item");
+            }
+```
+Jag skapade även RecyclerViewItem-klassen.
 
 Implementationsexempel
 
