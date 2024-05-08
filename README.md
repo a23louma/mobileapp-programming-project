@@ -88,6 +88,12 @@ I RecyclerViewAdapter lade jag till metoden updateData.
         notifyDataSetChanged();
     }
 ```    
+
+Jag hade problem med att bara ett objekt från JSON-arrayen visades. Efter att jag ändrade layout-
+height till wrap content i recyclerviewitem.xml visades alla 10 objekt upp.
+```
+android:layout_height="wrap_content">
+```
 Implementationsexempel
 
 Implementationsexempel VG (för de som satsar på VG) 

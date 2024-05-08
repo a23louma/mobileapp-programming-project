@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
     private RecyclerViewAdapter adapter;
     private Gson gson;
     private final String JSON_URL = "https://mobprog.webug.se/json-api?login=a23louma";
-    //private final String JSON_FILE = "mountains.json";
     private ArrayList<RecyclerViewItem> items;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +28,8 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         gson = new Gson();
-
         new JsonTask(this).execute(JSON_URL);
+
         items = new ArrayList<>(Arrays.asList(new RecyclerViewItem("Fisk1"),new RecyclerViewItem("Fisk2"), new RecyclerViewItem("Fisk3")));
 
         Log.d("Fisk URL begin", "" + items.size());
@@ -56,8 +55,6 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         Log.d("Fisk MainActivity", json);
         Type type = new TypeToken<ArrayList<RecyclerViewItem>>() {}.getType();
         items = gson.fromJson(json, type);
-        //ArrayList<RecyclerViewItem> temp = gson.fromJson(json, type);
-        //items.addAll(temp);
         for(RecyclerViewItem r : items) {
             Log.d("Fisk_items onPE", r.getTitle() + "");
         }
