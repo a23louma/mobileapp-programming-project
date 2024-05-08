@@ -15,11 +15,11 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener {
 
     private RecyclerViewAdapter adapter;
     private Gson gson;
-    private final String JSON_URL = "https://mobprog.webug.se/json-api?login=brom";
+    private final String JSON_URL = "https://mobprog.webug.se/json-api?login=a23louma";
     private final String JSON_FILE = "mountains.json";
     private ArrayList<RecyclerViewItem> items = new ArrayList<>();
     @Override
@@ -42,5 +42,18 @@ public class MainActivity extends AppCompatActivity {
         view.setLayoutManager(new LinearLayoutManager(this));
         view.setAdapter(adapter);
         Log.d("Fisk Adapter done", "");
+        new JsonTask(this).execute(JSON_URL);
+    }
+
+    @Override
+    public void onPostExecute(String json) {
+        Log.d("Fisk MainActivity", json);
+        Type type = new TypeToken<ArrayList<RecyclerViewItem>>() {}.getType();
+        items = gson.fromJson(json, type);
+        for(RecyclerViewItem r : items) {
+            Log.d("Fisk_items onPE", r.getTitle() + "");
+        }
+        adapter.updateData(items);
+        Log.d("Fisk items", "" + items.size());
     }
 }

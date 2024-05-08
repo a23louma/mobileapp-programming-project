@@ -55,7 +55,39 @@ samt tillhörande getters-metoder. Se koden nedan.
     @ SerializedName ("company")
     private int difficulty;
 ```
+I AndroidManifest.xml möjliggjorde jag internetåtkomst genom att lägga till följande kodrad.
+```
+<uses-permission android:name="android.permission.INTERNET" />
+```
 
+Jag skapade en klassen JsonTask och kopierade koden för denna klass från Canvas.
+
+I MainActivity behövde jag extenda JsonTaskListener. Jag lade till metoden OnPostExecute.
+
+```
+    @Override
+    public void onPostExecute(String json) {
+        Log.d("Berg MainActivity", json);
+        Type type = new TypeToken<ArrayList<RecyclerViewItem>>() {}.getType();
+        items = gson.fromJson(json, type);
+        for(RecyclerViewItem r : items) {
+            Log.d("Fisk_items onPE", r.getTitle() + "");
+        }
+        adapter.updateData(items);
+        Log.d("Fisk items", "" + items.size());
+    }
+```
+I RecyclerViewAdapter lade jag till metoden updateData.
+```
+    public void updateData(ArrayList<RecyclerViewItem> newItems) {
+        items.clear();
+        items.addAll(newItems);
+        Log.d("Fisk items_updateData", "" + items.size());
+        for(RecyclerViewItem r : newItems)
+            Log.d("Fisk", r.getTitle() + "");
+        notifyDataSetChanged();
+    }
+```    
 Implementationsexempel
 
 Implementationsexempel VG (för de som satsar på VG) 

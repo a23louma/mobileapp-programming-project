@@ -1,6 +1,7 @@
 package com.example.project;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +38,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public int getItemCount() {
         return 0;
+    }
+
+    public void updateData(ArrayList<RecyclerViewItem> newItems) {
+        items.clear();
+        items.addAll(newItems);
+        Log.d("Fisk items_updateData", "" + items.size());
+        for(RecyclerViewItem r : newItems)
+            Log.d("Fisk", r.getTitle() + "");
+        notifyDataSetChanged();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
