@@ -3,9 +3,9 @@ package com.example.project;
 import com.google.gson.annotations.SerializedName;
 
 public class RecyclerViewItem {
-    @ SerializedName ("ID")
+    @ SerializedName ("name")
     private String title;
-    private String name;
+   // private String ID;
     @ SerializedName ("location")
     private String origin;
     @ SerializedName ("size")
@@ -13,7 +13,7 @@ public class RecyclerViewItem {
     @ SerializedName ("cost")
     private int waterTemperature;
     @ SerializedName ("company")
-    private int difficulty;
+    private String difficulty;
 
     public RecyclerViewItem(String title) {
         this.title = title;
@@ -22,9 +22,7 @@ public class RecyclerViewItem {
     public String getTitle() {
         return title;
     }
-    public String getName() {
-        return name;
-    }
+    //public String getID() { return ID; }
 
     public String getOrigin() {
         return origin;
@@ -38,11 +36,16 @@ public class RecyclerViewItem {
         return waterTemperature;
     }
 
+    public String getDifficulty() {
+        return difficulty;
+    }
+
     @Override
     public String toString() {
-        return "Namn: " + name + "\n" +
+        return "Namn: " + title + "\n" +
                 "Härkomst: " + origin + "\n" +
                 "Storlek i centimeter: " + sizeInCentimeters + "\n" +
-                "Vattentemperatur: " + waterTemperature + "\n";
+                "Vattentemperatur: " + waterTemperature + "\n" +
+                "Svårighetsgrad: " + difficulty + "\n";
     }
 }

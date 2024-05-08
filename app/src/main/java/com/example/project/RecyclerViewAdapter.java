@@ -26,28 +26,23 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
     @NonNull
     @Override
-    public RecyclerViewAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        return null;
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new ViewHolder(layoutInflater.inflate(R.layout.recyclerviewitem, parent, false));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerViewAdapter.ViewHolder viewHolder, int i) {
-
+    public void onBindViewHolder(ViewHolder holder, int position) {
+        holder.title.setText(items.get(position).getTitle());
+        holder.title.setText(items.get(position).toString());
+        Log.d("fiskhej_", "" + items.get(position).getTitle()
+         + items.get(position).toString());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return items.size();
     }
 
-    public void updateData(ArrayList<RecyclerViewItem> newItems) {
-        items.clear();
-        items.addAll(newItems);
-        Log.d("Fisk items_updateData", "" + items.size());
-        for(RecyclerViewItem r : newItems)
-            Log.d("Fisk", r.getTitle() + "");
-        notifyDataSetChanged();
-    }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView title;
@@ -64,5 +59,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public interface OnClickListener {
         void onClick(RecyclerViewItem item);
+    }
+
+    public void updateData(ArrayList<RecyclerViewItem> newItems) {
+        items.clear();
+        items.addAll(newItems);
+        Log.d("Fisk items_updateData", "" + items.size() + newItems.size());
+        for(RecyclerViewItem r : newItems)
+            Log.d("Fisk", r.getTitle() + "");
+        notifyDataSetChanged();
     }
 }
