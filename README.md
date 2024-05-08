@@ -94,6 +94,14 @@ height till wrap content i recyclerviewitem.xml visades alla 10 objekt upp.
 ```
 android:layout_height="wrap_content">
 ```
+
+Jag skapade en ny Empty View Activity som jag namngav SecondActivity för ABOUT-skärmen. Jag skapade
+även tillhörande xml-fil och tog bort all onödig kod från SecondActivity. Jag fick felmeddelanden
+efter att detta var gjort och jag behövde gå in i build gradle och ändra versionen för activity samt
+minSdkVersion till 26. Se koden nedan.
+```
+implementation 'androidx.activity:activity:1.2.0'
+```
 Implementationsexempel
 
 Implementationsexempel VG (för de som satsar på VG) 
