@@ -155,6 +155,14 @@ metoden.
                 startActivity(intent);
             }
 ```            
+I activity_second lade jag till en WebView för att senare kunna visa upp en html-fil för About-skärmen
+i SecondActivity.
+```   
+    <WebView
+        android:id="@+id/my_about_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+```   
 Implementationsexempel
 
 Implementationsexempel VG (för de som satsar på VG) 
