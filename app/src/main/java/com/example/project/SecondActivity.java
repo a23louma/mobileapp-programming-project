@@ -14,6 +14,6 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
         aboutWebView = findViewById(R.id.about_webview);
-        //myWebView.loadUrl("https://his.se");
+        aboutWebView.loadUrl("file:///android_asset/about.html");
     }
 }

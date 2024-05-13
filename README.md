@@ -173,6 +173,11 @@ I SecondActivity skapade jag ett WebView-objekt och hämtade id från activity_s
         aboutWebView = findViewById(R.id.about_webview);
     }
 ```   
+I SecondActivity lade jag till about.html till aboutWebView med hjälp av loadUrl. Jag ändrade även
+paragraf-texten i about.html.
+```   
+aboutWebView.loadUrl("file:///android_asset/about.html");
+```   
 Jag skapade en ny assets-mapp och i mappen skapade jag en html-fil, about.html, för about-skärmen.
 Implementationsexempel
 
