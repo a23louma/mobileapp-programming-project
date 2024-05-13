@@ -22,16 +22,17 @@
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="@id/toolbar"
+            android:id="@+id/openSecondActivityButton"
+            android:text="@string/button_about"/>
+
     </com.google.android.material.appbar.AppBarLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintRight_toRightOf="parent"
-        android:id="@+id/openSecondActivityButton"
-        app:layout_constraintBottom_toTopOf="@id/recycler_view"
-        android:text="@string/button_about"
-        android:layout_marginTop="60dp"/>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
