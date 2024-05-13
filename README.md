@@ -147,6 +147,14 @@ till höger av MainActivity.
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="100dp"/>
 ```
+För att kunna öppna SecondActivity från MainActivity med about-knappen skapades ett intent i OnClick-
+metoden.
+```
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                startActivity(intent);
+            }
+```            
 Implementationsexempel
 
 Implementationsexempel VG (för de som satsar på VG) 
