@@ -173,6 +173,7 @@ I SecondActivity skapade jag ett WebView-objekt och hämtade id från activity_s
         aboutWebView = findViewById(R.id.about_webview);
     }
 ```   
+Jag skapade en ny assets-mapp och i mappen skapade jag en html-fil, about.html, för about-skärmen.
 Implementationsexempel
 
 Implementationsexempel VG (för de som satsar på VG) 
