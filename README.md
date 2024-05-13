@@ -114,7 +114,39 @@ till button-texten.
         app:layout_constraintBottom_toTopOf="@id/recycler_view"
         android:text="@string/button_about"/>
 ```
+Därefter lade jag till en Button i MainActivity och använde findViewById för att hämta den från 
+activity_main.xml.
+```
+        aboutButton = findViewById(R.id.openSecondActivityButton);
+        aboutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+            }
+        });
+```
+Jag ändrade constraints i activity_main för att synliggöra about-knappen och placera den längst upp
+till höger av MainActivity.
+```
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/openSecondActivityButton"
+        app:layout_constraintBottom_toTopOf="@id/recycler_view"
+        android:text="@string/button_about"
+        android:layout_marginTop="60dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="100dp"/>
+```
 Implementationsexempel
 
 Implementationsexempel VG (för de som satsar på VG) 
