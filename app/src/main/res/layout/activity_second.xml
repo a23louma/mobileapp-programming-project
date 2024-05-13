@@ -8,7 +8,7 @@
     tools:context=".SecondActivity">
 
     <WebView
-        android:id="@+id/my_about_webview"
+        android:id="@+id/about_webview"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

@@ -159,9 +159,19 @@ I activity_second lade jag till en WebView för att senare kunna visa upp en htm
 i SecondActivity.
 ```   
     <WebView
-        android:id="@+id/my_about_webview"
+        android:id="@+id/about_webview"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+```   
+I SecondActivity skapade jag ett WebView-objekt och hämtade id från activity_second.xml.
+```   
+    WebView aboutWebView;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_second);
+        aboutWebView = findViewById(R.id.about_webview);
+    }
 ```   
 Implementationsexempel
 
