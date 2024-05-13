@@ -7,8 +7,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/recycler_view_item_title"
-        android:background="#d8bdf2"/>
+        android:id="@+id/recycler_view_item_title" />
 
 
 </LinearLayout>
