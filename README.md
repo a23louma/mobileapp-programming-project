@@ -102,6 +102,19 @@ minSdkVersion till 26. Se koden nedan.
 ```
 implementation 'androidx.activity:activity:1.2.0'
 ```
+Jag lade till en knapp i activity_main för att kunna öppna SecondActivity. I strings.xml lade jag
+till button-texten.
+```
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/openSecondActivityButton"
+        app:layout_constraintBottom_toTopOf="@id/recycler_view"
+        android:text="@string/button_about"/>
+```
+
 Implementationsexempel
 
 Implementationsexempel VG (för de som satsar på VG) 
