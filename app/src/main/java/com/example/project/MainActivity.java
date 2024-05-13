@@ -2,6 +2,8 @@ package com.example.project;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -21,6 +23,8 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
     private Gson gson;
     private final String JSON_URL = "https://mobprog.webug.se/json-api?login=a23louma";
     private ArrayList<RecyclerViewItem> items;
+    private Button aboutButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +33,14 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         setSupportActionBar(toolbar);
         gson = new Gson();
         new JsonTask(this).execute(JSON_URL);
+
+        aboutButton = findViewById(R.id.openSecondActivityButton);
+        aboutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
         items = new ArrayList<>(Arrays.asList(new RecyclerViewItem("Fisk1"),new RecyclerViewItem("Fisk2"), new RecyclerViewItem("Fisk3")));
 
