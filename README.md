@@ -186,7 +186,7 @@ Jag ändrade namnet på appen i strings.xml.
 ```
 Implementationsexempel
 
-Implementationsexempel VG (för de som satsar på VG) 
+
 
 Reflektion
 
