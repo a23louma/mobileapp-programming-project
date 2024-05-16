@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#84DDB7"
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -33,7 +34,7 @@
         android:id="@+id/openSecondActivityButton"
         android:text="@string/button_about"
         android:layout_marginTop="60dp"
-        android:background="#e0a2d7"/>
+        android:background="#65BA96"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
@@ -44,6 +45,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="100dp"
-        android:background="#d8bdf2"/>
+        android:background="#D4FBFF"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

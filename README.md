@@ -179,6 +179,11 @@ paragraf-texten i about.html.
 aboutWebView.loadUrl("file:///android_asset/about.html");
 ```   
 Jag skapade en ny assets-mapp och i mappen skapade jag en html-fil, about.html, för about-skärmen.
+
+Jag ändrade namnet på appen i strings.xml.
+```
+<string name="app_name">Guide för akvariefiskar</string>
+```
 Implementationsexempel
 
 Implementationsexempel VG (för de som satsar på VG) 
