@@ -5,7 +5,6 @@ import com.google.gson.annotations.SerializedName;
 public class RecyclerViewItem {
     @ SerializedName ("name")
     private String title;
-   // private String ID;
     @ SerializedName ("location")
     private String origin;
     @ SerializedName ("size")

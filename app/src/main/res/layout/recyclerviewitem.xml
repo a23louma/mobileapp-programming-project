@@ -9,5 +9,4 @@
         android:layout_height="wrap_content"
         android:id="@+id/recycler_view_item_title" />
 
-
 </LinearLayout>
