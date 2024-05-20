@@ -188,6 +188,8 @@ För att visa en bild i png lade jag till en png-fil i assets-mappen och skrev k
 ```
 <img src="fisk.png" alt="Bild av fisk" style="position: absolute; bottom: 0; max-width: 100%; max-height: 100%; height: auto; width: auto;">
 ```
+
+Jag ändrade färger i colors.xml för att ändra färgen på toolbaren.
 Implementationsexempel
 
 
